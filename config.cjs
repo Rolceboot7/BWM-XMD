@@ -15188,24 +15188,24 @@ const fs = require("fs");
 require("dotenv").config();
 
 const config = {
-  SESSION_ID: process.env.SESSION_ID || "Your Session Id",
+  SESSION_ID: process.env.SESSION_ID || "Adams-2024;;;eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiWUJtL0p2anM4WENxZ2VUUkFLYUdkS2o5dFZXbC9ydTk5MStWak5NSDdXbz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiRUJqR2lvb1VTZ1FhV1JyeEx3VzJqS2ZUTjdmNUtQTkhhVlJNNXMzL1FpQT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJtQzFjQlpEUjRtY2EzcW41SFB6SjRKdkF3WmN2MUU5Wm5xYUNRRlFVNm1jPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJ2cmxXeUlrVjNKaWdxUVA2bFNJeGQwUmt1NjFWSU41L3A4OUFENnZzR1dJPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjRGVkhWNG96SzVVZERUa2o2cmhjMVRNSEVWcGxaYUhPM3hTQ3UwZU9WVTA9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkZGLzM4cHVYdEFtRm5sSXdMS0RZNlJNSzM5aUpjWWlucWZEZkRINkJFVDg9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiZUZhQ0FiOUo2dXRYT3hpRW9XZnJuVUkydllYenJaL08xUER5bzl2ZnBFST0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidWdCUkI2czFEVFpKdCtSdWo1TGdTaUJJMHdJODFGSjkwTWtYbStkWERXWT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjlaZUNOSXJhVmxoV2JZVW50MnFmTUZIWFAvOXZVS3Z0NFRONXhubXdGUFV2Smh3UmxYeXZmOHE1TVloV056QjVJZHlUNTVxcUFyaXZ1VnArQjFEcGlRPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6NiwiYWR2U2VjcmV0S2V5IjoiRk1RSGxJMWpsSzdsbXE1T2dHdWpmRXBlUXRJOG91VnpmeUNmNVdjYUN1Yz0iLCJwcm9jZXNzZWRIaXN0b3J5TWVzc2FnZXMiOltdLCJuZXh0UHJlS2V5SWQiOjMxLCJmaXJzdFVudXBsb2FkZWRQcmVLZXlJZCI6MzEsImFjY291bnRTeW5jQ291bnRlciI6MCwiYWNjb3VudFNldHRpbmdzIjp7InVuYXJjaGl2ZUNoYXRzIjpmYWxzZX0sImRldmljZUlkIjoiLUN5YXpQVmFSWS1Ca0lTYmRvWGVJdyIsInBob25lSWQiOiI4Y2JiYzNjMy00YjI1LTQ1NTctOGI3Ni05NzVkOGU0ZmQxZWMiLCJpZGVudGl0eUlkIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVjRjVWhKbVZENkxxR3RrRy9YMU9xdnJycHZrPSJ9LCJyZWdpc3RlcmVkIjp0cnVlLCJiYWNrdXBUb2tlbiI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjkrcnBmTjh1Sy9qOWwwOVQyWGcveFFTaWhVYz0ifSwicmVnaXN0cmF0aW9uIjp7fSwicGFpcmluZ0NvZGUiOiI5VjFSSlhKRCIsIm1lIjp7ImlkIjoiMjQyMDY0MDEwMTI1OjI1QHMud2hhdHNhcHAubmV0IiwibmFtZSI6IuqngeCmlFJvbGNl44O7Sm9jcmlzc2XgppTgp6Pqp4LwlqOYIn0sImFjY291bnQiOnsiZGV0YWlscyI6IkNPekZqc0VGRU1QaHc3a0dHQWNnQUNnQSIsImFjY291bnRTaWduYXR1cmVLZXkiOiJGSWJFNWJZbW1wcUM0U3RMdDdpMGNSQXdKTHluSDZzak82elF5bU5pSHdFPSIsImFjY291bnRTaWduYXR1cmUiOiIweEx1YlYrbFVZUDVueGRtY2VhVWZJM090NXlJZmhPT3J2Rmg4a0ovd0swUFlHMndwdVNsWmg1Z204TTlZYzh5clF3YXdmUVdQdURsSzl4R1dhYXZEdz09IiwiZGV2aWNlU2lnbmF0dXJlIjoiS3V5UTdpMFBjUW9qSmVEWlRTRWdMbG9zSjZpSVpkS25nL1UwMStiRjJ1bXpyWnR3anNZQ1JxTkRwMjJMQlRJdlRyakZZL0EwOW41SHMyMElZOVNsaFE9PSJ9LCJzaWduYWxJZGVudGl0aWVzIjpbeyJpZGVudGlmaWVyIjp7Im5hbWUiOiIyNDIwNjQwMTAxMjU6MjVAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCUlNHeE9XMkpwcWFndUVyUzdlNHRIRVFNQ1M4cHgrckl6dXMwTXBqWWg4QiJ9fV0sInBsYXRmb3JtIjoic21iYSIsImxhc3RBY2NvdW50U3luY1RpbWVzdGFtcCI6MTczMTI2MDYyNCwibXlBcHBTdGF0ZUtleUlkIjoiQUFBQUFLcXkifQ==",
   PREFIX: process.env.PREFIX || '.',
-  AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN !== undefined ? process.env.AUTO_STATUS_SEEN === 'true' : true, 
-  AUTO_DL: process.env.AUTO_DL !== undefined ? process.env.AUTO_DL === 'true' : false,
-  AUTO_READ: process.env.AUTO_READ !== undefined ? process.env.AUTO_READ === 'true' : false,
-  AUTO_TYPING: process.env.AUTO_TYPING !== undefined ? process.env.AUTO_TYPING === 'true' : false,
-  AUTO_RECORDING: process.env.AUTO_RECORDING !== undefined ? process.env.AUTO_RECORDING === 'true' : false,
-  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE !== undefined ? process.env.ALWAYS_ONLINE === 'true' : false,
-  AUTO_REACT: process.env.AUTO_REACT !== undefined ? process.env.AUTO_REACT === 'true' : false,
+  AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN !== undefined ? process.env.AUTO_STATUS_SEEN === 'false' : true, 
+  AUTO_DL: process.env.AUTO_DL !== undefined ? process.env.AUTO_DL === 'false' : true,
+  AUTO_READ: process.env.AUTO_READ !== undefined ? process.env.AUTO_READ === 'false' : true,
+  AUTO_TYPING: process.env.AUTO_TYPING !== undefined ? process.env.AUTO_TYPING === 'false' : true,
+  AUTO_RECORDING: process.env.AUTO_RECORDING !== undefined ? process.env.AUTO_RECORDING === 'false' : false,
+  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE !== undefined ? process.env.ALWAYS_ONLINE === 'false' : true,
+  AUTO_REACT: process.env.AUTO_REACT !== undefined ? process.env.AUTO_REACT === 'false' : true,
    /*auto block only for 212 */
-  AUTO_BLOCK: process.env.AUTO_BLOCK !== undefined ? process.env.AUTO_BLOCK === 'true' : true,
+  AUTO_BLOCK: process.env.AUTO_BLOCK !== undefined ? process.env.AUTO_BLOCK === 'false' : true,
   
   
-  REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'true' : false, 
-  NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
+  REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'false' : false, 
+  NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'false' : true,
   MODE: process.env.MODE || "public",
-  OWNER_NAME: process.env.OWNER_NAME || "©Ibrahim Adams",
-  OWNER_NUMBER: process.env.OWNER_NUMBER || "254710772666",
+  OWNER_NAME: process.env.OWNER_NAME || "©Rolce Jocrisse",
+  OWNER_NUMBER: process.env.OWNER_NUMBER || "242064010125",
   GEMINI_KEY: process.env.GEMINI_KEY || "AIzaSyCUPaxfIdZawsKZKqCqJcC-GWiQPCXKTDc",
   WELCOME: process.env.WELCOME !== undefined ? process.env.WELCOME === 'true' : false, 
 };
